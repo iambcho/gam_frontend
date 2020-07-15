@@ -199,7 +199,9 @@ input[type=number].studentID {
   color: white;
   text-decoration: none;
   font-family: 'Overpass';
-  font-weight: 'bold';
+  font-weight: 900;
+  font-size: 18px;
+
 }
 
 .nav-link:hover {
