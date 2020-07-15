@@ -19,6 +19,9 @@ import './App.css';
 // import EditCampus from './components/container/EditCampus';
 import HomePage from './components/container/HomePage';
 import AllRestaurants from './components/container/AllRestaurants';
+import Checkout from './components/container/Checkout';
+import Confirmation from './components/container/Confirmation';
+
 
 //This is needed in order to create a SPA (Single Page Application)
 //SPA's are useful in the sense that they allow the client to 
@@ -47,6 +50,8 @@ class AppContainer extends Component {
     // const EditCampusComponent = () => <EditCampus/>
 		const HomePageComponent = () => <HomePage/>
     const AllRestaurantsComponent = () => <AllRestaurants/>
+    const CheckoutComponent = () => <Checkout/>
+    const ConfirmationComponent = () => <Confirmation/>
 
     return (
       <div>
@@ -62,6 +67,8 @@ class AppContainer extends Component {
                 to be able to load to component at the appropriate url link */}
                 <Route exact path="/" render={HomePageComponent}/>
                 <Route exact path="/restaurants" render={AllRestaurantsComponent}/>
+                <Route exact path="/checkout" render={CheckoutComponent}/>
+                <Route exact path="/confirmation" render={ConfirmationComponent}/>
                 {/* <Route exact path="/students" render={AllStudentsComponent}/>
                 <Route exact path="/add_students" render={AddStudentComponent}/> 
                 <Route exact path="/single_student/:studentId" render={SingleStudentComponent}/>
