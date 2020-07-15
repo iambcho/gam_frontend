@@ -124,7 +124,7 @@ const AllRestaurantsView= (props) => {
           </Grid>
           </Grid>
 
-
+								{restaurants.map(restaurant => <p>{restaurant.name}</p>)}
         </div>
     );
 }
