@@ -10,12 +10,10 @@ import Grid from '@material-ui/core/Grid';
 
 const MissionView = () => {
 
-  const missionBackground = {
-    backgroundColor: 'white'
-  }
-
-  const pageSelected = {
-    color: '#1E201F'
+  const styles = {
+    pageSelected: {
+      color: '#1E201F'
+    }
   }
 
   return (
@@ -28,12 +26,12 @@ const MissionView = () => {
             </svg>
           </Link></li>
           <li><Link className="nav-link" to="/">HOME</Link></li>
-          <li><Link className="nav-link" style={pageSelected} to="/mission">OUR MISSION</Link></li>
+          <li><Link className="nav-link" style={styles.pageSelected} to="/mission">OUR MISSION</Link></li>
         </ul>
       </div>
       <br />
 
-      <Grid className="mission-grid" container spacing={2}>
+      <Grid className="content-grid" container spacing={2}>
         <Grid item xs={12} sm={6}>
           <svg width="300" height="300" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="100" cy="100" r="100" fill="white" />
