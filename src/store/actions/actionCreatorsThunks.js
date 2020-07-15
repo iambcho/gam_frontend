@@ -6,43 +6,46 @@ import axios from 'axios';
 let arrayOfRestaurantsFromAPI = [
 		{
 			"name": "Test Name",
-			"hasFood": "True",
+			"hasFood": true,
 			"foodPrice": 10,
-			"hasCoffee": "True",
+			"hasCoffee": true,
 			"coffeePrice": 10,
-			"hasDessert": "True",
+			"hasDessert": true,
 			"dessertPrice": 10,
 			"address": "Test Address",
 			"zipcode": 11111,
 			"restaurantImage": "profile-picture.svg",
+			"cuisine": "Mexican",
 			"restaurantId": 1
 			
 		},
 		{
 			"name": "Test Name2",
-			"hasFood": "True",
+			"hasFood": true,
 			"foodPrice": 10,
-			"hasCoffee": "True",
+			"hasCoffee": true,
 			"coffeePrice": 10,
-			"hasDessert": "True",
+			"hasDessert": true,
 			"dessertPrice": 10,
 			"address": "Test Address2",
 			"zipcode": 11111,
 			"restaurantImage": "profile-picture.svg",
+			"cuisine": "Mexican",
 			"restaurantId": 2
 			
 		},
 		{
 			"name": "Test Name3",
-			"hasFood": "True",
+			"hasFood": true,
 			"foodPrice": 10,
-			"hasCoffee": "True",
+			"hasCoffee": true,
 			"coffeePrice": 10,
-			"hasDessert": "True",
+			"hasDessert": true,
 			"dessertPrice": 10,
 			"address": "Test Address3",
 			"zipcode": 11111,
 			"restaurantImage": "profile-picture.svg",
+			"cuisine": "Mexican",
 			"restaurantId": 1
 			
 		}
