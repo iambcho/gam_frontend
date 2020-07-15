@@ -14,7 +14,7 @@ let arrayOfRestaurantsFromAPI = [
 			"dessertPrice": 10,
 			"address": "Test Address",
 			"zipcode": 11111,
-			"restaurantImage": "Test Image",
+			"restaurantImage": "profile-picture.svg",
 			"restaurantId": 1
 			
 		},
@@ -28,7 +28,7 @@ let arrayOfRestaurantsFromAPI = [
 			"dessertPrice": 10,
 			"address": "Test Address2",
 			"zipcode": 11111,
-			"restaurantImage": "Test Image2",
+			"restaurantImage": "profile-picture.svg",
 			"restaurantId": 2
 			
 		},
@@ -42,7 +42,7 @@ let arrayOfRestaurantsFromAPI = [
 			"dessertPrice": 10,
 			"address": "Test Address3",
 			"zipcode": 11111,
-			"restaurantImage": "Test Image3",
+			"restaurantImage": "profile-picture.svg",
 			"restaurantId": 1
 			
 		}
