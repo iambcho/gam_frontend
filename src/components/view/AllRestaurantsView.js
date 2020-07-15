@@ -126,18 +126,18 @@ const AllRestaurantsView= (props) => {
                                           {restaurant.hasFood == true && <img src='meal-icon.svg'></img>}
                                           {restaurant.hasCoffee == true && <img src='coffee-icon.svg'></img>}
                                           {restaurant.hasDessert == true && <img src='dessert-icon.svg'></img>}
-																					
-                                        </Grid>
-																				{
+																					{
 																						restaurant.restaurantId === currentRestaurant.restaurantId 
 																						? <Link to={`/restaurant/${restaurant.restaurantId}`}>
-																								<Button>
+																								<ColorButton style={{marginBottom:"70px", marginLeft:"15px"}}>
 																									Select
-																								</Button>
+																								</ColorButton>
 																							</Link>
 																						: ""
 
 																					}
+                                        </Grid>
+																				
                                     </Grid>
                                 </Grid>
 
