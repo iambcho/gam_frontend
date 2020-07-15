@@ -8,7 +8,8 @@ import { purple } from '@material-ui/core/colors';
 
 const AllRestaurantsView= (props) => {
 		//object destructuring that takes restaurants and any other things we add here from props
-    const {restaurants} = props;
+
+    const {restaurants, currentRestaurantThunk} = props;
     const inputZip = '11111'
     const filteredRestaurants = restaurants.filter(restaurant => restaurant.zipcode == inputZip)
     
@@ -91,8 +92,10 @@ const AllRestaurantsView= (props) => {
 
                    {filteredRestaurants.map((restaurant)=>{ 
                     return (
-                      <Button onClick =''>
-                      <Grid item> 
+
+                      <Button>
+                      <Grid item onClick={() => currentRestaurantThunk(restaurant)}>
+                        <Link to={`/restaurant/${restaurant.restaurantId}`}>
                         <Paper style={{minHeight: 150, minWidth: 800, maxHeight: 170, overflow: 'auto', backgroundColor: '#f0f0f5', border: '1px solid white'}}> 
                           <List className="List">
                             <ListItem className="ListItem" alignItems="center">
@@ -104,7 +107,13 @@ const AllRestaurantsView= (props) => {
 
                                 <Grid item xs={7}>
                                   <div className={classes.paper}>
-                                    <p>{restaurant.name}</p>
+                                    {/* <Button > */}
+																			<p>
+																				
+																					{restaurant.name}
+																				
+																			</p>
+																		{/* </Button> */}
                                     <p>{restaurant.cuisine}</p>
                                     <p>{restaurant.address}</p>
                                   </div>
@@ -119,17 +128,21 @@ const AllRestaurantsView= (props) => {
                                         </Grid>
                                     </Grid>
                                 </Grid>
+
                             </Grid>
+
                           </ListItem>
                           </List>
                       </Paper> <br/>
-                    </Grid> 
-                    </Button>               
+											</Link>
+                    </Grid>  
+										</Button>             
 
                       )
                   })} 
           
           </Grid>
+					
           </Grid>
         </div>
     );
