@@ -21,6 +21,8 @@ import HomePage from './components/container/HomePage';
 import AllRestaurants from './components/container/AllRestaurants';
 import Checkout from './components/container/Checkout';
 import Confirmation from './components/container/Confirmation';
+import Mission from './components/container/Mission';
+import SingleRestaurant from './components/container/SingleRestaurant';
 
 
 //This is needed in order to create a SPA (Single Page Application)
@@ -28,7 +30,7 @@ import Confirmation from './components/container/Confirmation';
 //transition between "pages" without having to reload the entire page
 //instead with routers you can just load the contents of the single page
 //that need to be changed, leading to faster load times
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // Import Appview to be able to display the components in a SPA;
 import AppView from "./AppView";
@@ -48,10 +50,12 @@ class AppContainer extends Component {
     // const AllCampusesComponent = () => <AllCampuses/>
     // const AddCampusComponent = () => <AddCampus/>
     // const EditCampusComponent = () => <EditCampus/>
-		const HomePageComponent = () => <HomePage/>
-    const AllRestaurantsComponent = () => <AllRestaurants/>
-    const CheckoutComponent = () => <Checkout/>
-    const ConfirmationComponent = () => <Confirmation/>
+    const HomePageComponent = () => <HomePage />
+    const AllRestaurantsComponent = () => <AllRestaurants />
+    const CheckoutComponent = () => <Checkout />
+    const ConfirmationComponent = () => <Confirmation />
+    const MissionComponent = () => <Mission />
+    // const SingleRestaurantComponent = () => <SingleRestaurant />
 
     return (
       <div>
@@ -61,14 +65,16 @@ class AppContainer extends Component {
           components can be rendered at the same time but to avoid problems we ensure 
           only one page is rendered ) */}
           <Switch>
-          <div className="App">
-            <div className="App-header">
+            <div className="App">
+              <div className="App-header">
                 {/* Each Route Component needs a path prop followed by a render prop 
                 to be able to load to component at the appropriate url link */}
-                <Route exact path="/" render={HomePageComponent}/>
-                <Route exact path="/restaurants" render={AllRestaurantsComponent}/>
-                <Route exact path="/checkout" render={CheckoutComponent}/>
-                <Route exact path="/confirmation" render={ConfirmationComponent}/>
+                <Route exact path="/" render={HomePageComponent} />
+                <Route exact path="/restaurants" render={AllRestaurantsComponent} />
+                <Route exact path="/checkout" render={CheckoutComponent} />
+                <Route exact path="/confirmation" render={ConfirmationComponent} />
+                <Route exact path="/mission" render={MissionComponent} />
+                {/* <Route exact path="/restaurant" render={SingleRestaurantComponent} /> */}
                 {/* <Route exact path="/students" render={AllStudentsComponent}/>
                 <Route exact path="/add_students" render={AddStudentComponent}/> 
                 <Route exact path="/single_student/:studentId" render={SingleStudentComponent}/>
@@ -79,7 +85,7 @@ class AppContainer extends Component {
                 <Route exact path="/edit_campus" render={EditCampusComponent}/> */}
 
               </div>
-          </div>
+            </div>
           </Switch>
         </Router>
       </div>

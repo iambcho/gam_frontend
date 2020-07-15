@@ -10,29 +10,29 @@ import AllRestaurantsView from "../view/AllRestaurantsView";
 import { connect } from "react-redux";
 
 import { withRouter } from "react-router-dom";
-import { fetchRestaurantsThunk , currentRestaurantThunk } from '../../store/actions/actionCreatorsThunks';
+import { fetchRestaurantsThunk, currentRestaurantThunk } from '../../store/actions/actionCreatorsThunks';
 
 
 class AllRestaurants extends Component {
-    componentDidMount() {
-        this.props.fetchRestaurants();
-    }
+	componentDidMount() {
+		this.props.fetchRestaurants();
+	}
 
-    render() {
-        return (
-						//we pass the state into this component, so we can actually load all the restaurants
-						
-						<AllRestaurantsView restaurants = {this.props.restaurants}/>
-					
-        )
-    }
+	render() {
+		return (
+			//we pass the state into this component, so we can actually load all the restaurants
+
+			<AllRestaurantsView restaurants={this.props.restaurants} />
+
+		)
+	}
 }
 
 // Declaration for mapStateToProps;
 // The keys in this returned object will be on your component's `props` object;
 // The values of these keys reflect the value of the piece of state in your Redux store;
 const mapState = (state) => {
-	return({
+	return ({
 		restaurants: state.allRestaurants,
 	})
 }

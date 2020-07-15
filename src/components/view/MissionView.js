@@ -10,12 +10,23 @@ import '../../App.css';
 const MissionView = () => {
   const style = {
     color: 'white',
-    textDecoration: 'none'
+    textDecoration: 'none',
+    fontFamily: 'Overpass'
   }
+
   return (
     <div className="container">
-      <h1 id="main-page">Test Page</h1>
+      <div className="nav-bar">
+        <ul>
+          <li><Link style={style} to="/">Home</Link></li>
+          <li><Link style={style} to="/mission">Our Mission</Link></li>
+        </ul>
+      </div>
+      <br />
+
     </div>
+
+
   );
 }
 
