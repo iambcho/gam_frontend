@@ -14,6 +14,7 @@ import { fetchRestaurantsThunk, currentRestaurantThunk } from '../../store/actio
 
 
 class AllRestaurants extends Component {
+	
 	componentDidMount() {
 		this.props.fetchRestaurantsThunk();
 	}
@@ -24,6 +25,7 @@ class AllRestaurants extends Component {
 
 			<AllRestaurantsView 
 				restaurants={this.props.restaurants}
+				currentRestaurant={this.props.restaurant}
 				currentRestaurantThunk={this.props.currentRestaurantThunk}
 			/>
 
@@ -37,6 +39,7 @@ class AllRestaurants extends Component {
 const mapState = (state) => {
 	return ({
 		restaurants: state.allRestaurants,
+		restaurant: state.currentRestaurant
 	})
 }
 

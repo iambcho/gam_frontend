@@ -9,7 +9,7 @@ import { purple } from '@material-ui/core/colors';
 const AllRestaurantsView= (props) => {
 		//object destructuring that takes restaurants and any other things we add here from props
 
-    const {restaurants, currentRestaurantThunk} = props;
+    const {restaurants, currentRestaurant, currentRestaurantThunk} = props;
     const inputZip = '11111'
     const filteredRestaurants = restaurants.filter(restaurant => restaurant.zipcode == inputZip)
     
@@ -95,7 +95,6 @@ const AllRestaurantsView= (props) => {
 
                       <Button>
                       <Grid item onClick={() => currentRestaurantThunk(restaurant)}>
-                        <Link to={`/restaurant/${restaurant.restaurantId}`}>
                         <Paper elevation={5} style={{minHeight: 100, minWidth: 800, maxHeight: 170, overflow: 'auto', backgroundColor: 'white', border: '1px solid white'}}> 
                           <List className="List">
                             <ListItem className="ListItem" alignItems="center">
@@ -127,7 +126,18 @@ const AllRestaurantsView= (props) => {
                                           {restaurant.hasFood == true && <img src='meal-icon.svg'></img>}
                                           {restaurant.hasCoffee == true && <img src='coffee-icon.svg'></img>}
                                           {restaurant.hasDessert == true && <img src='dessert-icon.svg'></img>}
+																					
                                         </Grid>
+																				{
+																						restaurant.restaurantId === currentRestaurant.restaurantId 
+																						? <Link to={`/restaurant/${restaurant.restaurantId}`}>
+																								<Button>
+																									Select
+																								</Button>
+																							</Link>
+																						: ""
+
+																					}
                                     </Grid>
                                 </Grid>
 
@@ -136,7 +146,7 @@ const AllRestaurantsView= (props) => {
                           </ListItem>
                           </List>
                       </Paper> <br/>
-											</Link>
+											{/* </Link> */}
                     </Grid>  
 										</Button>             
 

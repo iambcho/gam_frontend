@@ -4,10 +4,13 @@ import '../../App.css';
 
 const AllRestaurantsView= (props) => {
 		//destructuring from props 
-		const { restaurants, currentRestaurantThunk } = props;
+		const { restaurants, restaurant, currentRestaurantThunk } = props;
+
     return (
         <div className="container">
 					<p>{restaurants.length}</p>
+					<p>{restaurant.restaurantId}</p>
+
         </div>
     );
 }

@@ -74,7 +74,7 @@ class AppContainer extends Component {
                 <Route exact path="/checkout" render={CheckoutComponent} />
                 <Route exact path="/confirmation" render={ConfirmationComponent} />
                 <Route exact path="/mission" render={MissionComponent} />
-                <Route exact path="/restaurant" render={SingleRestaurantComponent} />
+                <Route exact path="/restaurant/:restaurantId" render={SingleRestaurantComponent} />
                 {/* <Route exact path="/students" render={AllStudentsComponent}/>
                 <Route exact path="/add_students" render={AddStudentComponent}/> 
                 <Route exact path="/single_student/:studentId" render={SingleStudentComponent}/>
