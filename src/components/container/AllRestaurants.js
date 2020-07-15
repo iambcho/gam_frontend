@@ -15,7 +15,7 @@ import { fetchRestaurantsThunk, currentRestaurantThunk } from '../../store/actio
 
 class AllRestaurants extends Component {
 	componentDidMount() {
-		this.props.fetchRestaurants();
+		this.props.fetchRestaurantsThunk();
 	}
 
 	render() {
@@ -43,7 +43,7 @@ const mapState = (state) => {
 // or thunks so that a component can communicate with the appropriate reducer function(s);
 const mapDispatch = (dispatch) => {
 	return {
-		fetchRestaurants: () => dispatch(fetchRestaurantsThunk())
+		fetchRestaurantsThunk: () => dispatch(fetchRestaurantsThunk())
 	}
 }
 
