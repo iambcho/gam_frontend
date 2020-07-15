@@ -17,9 +17,13 @@
   }
 }
 
+html {
+  height: 100%;
+  background: linear-gradient(180deg, #FF6827 0%, #FF4B4B 100%);
+}
+
 .App-header, body {
-  background: rgb(255,77,73);
-  /* background: linear-gradient(0deg, rgba(255,77,73,1) 0%, rgba(255,103,41,1) 100%); */
+  /* background: rgb(255,77,73); */
   /* min-height: 100vh; */
   /* display: flex; */
   flex-direction: column;
@@ -107,7 +111,7 @@ h1{
   height: 40px;
   padding-top: 7px;
   text-align: right;
-  background-color: #FF6729;
+  /* background-color: #FF6729; */
 }
 
 /* label, input, button {
