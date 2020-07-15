@@ -8,7 +8,8 @@ import { purple } from '@material-ui/core/colors';
 
 const AllRestaurantsView= (props) => {
 		//object destructuring that takes restaurants and any other things we add here from props
-    const {restaurants} = props;
+
+    const {restaurants, currentRestaurantThunk} = props;
     const inputZip = '11111'
     const filteredRestaurants = restaurants.filter(restaurant => restaurant.zipcode == inputZip)
     
@@ -90,9 +91,11 @@ const AllRestaurantsView= (props) => {
                 alignItems="stretch">
 
                    {filteredRestaurants.map((restaurant)=>{ 
-                    return (
-                      <Button onClick =''>
-                      <Grid item> 
+                    return ( 
+
+                      <Button>
+                      <Grid item onClick={() => currentRestaurantThunk(restaurant)}>
+                        <Link to={`/restaurant/${restaurant.restaurantId}`}>
                         <Paper elevation={5} style={{minHeight: 100, minWidth: 800, maxHeight: 170, overflow: 'auto', backgroundColor: 'white', border: '1px solid white'}}> 
                           <List className="List">
                             <ListItem className="ListItem" alignItems="center">
@@ -104,9 +107,17 @@ const AllRestaurantsView= (props) => {
 
                                 <Grid item xs={7}>
                                   <div className={classes.paper}>
-                                    <p>{restaurant.name}</p>
-                                    <p className='address'>{restaurant.cuisine}</p>
-                                    <p className='address'>{restaurant.address}</p>
+
+                                    {/* <Button > */}
+																			<p>
+																				
+																					{restaurant.name}
+																				
+																			</p>
+																		{/* </Button> */}
+                                    <p>{restaurant.cuisine}</p>
+                                    <p>{restaurant.address}</p>
+
                                   </div>
                                 </Grid>
 
@@ -119,17 +130,21 @@ const AllRestaurantsView= (props) => {
                                         </Grid>
                                     </Grid>
                                 </Grid>
+
                             </Grid>
+
                           </ListItem>
                           </List>
                       </Paper> <br/>
-                    </Grid> 
-                    </Button>               
+											</Link>
+                    </Grid>  
+										</Button>             
 
                       )
                   })} 
           
           </Grid>
+					
           </Grid>
         </div>
     );

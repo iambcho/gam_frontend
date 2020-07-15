@@ -22,7 +22,10 @@ class AllRestaurants extends Component {
 		return (
 			//we pass the state into this component, so we can actually load all the restaurants
 
-			<AllRestaurantsView restaurants={this.props.restaurants} />
+			<AllRestaurantsView 
+				restaurants={this.props.restaurants}
+				currentRestaurantThunk={this.props.currentRestaurantThunk}
+			/>
 
 		)
 	}
@@ -43,7 +46,9 @@ const mapState = (state) => {
 // or thunks so that a component can communicate with the appropriate reducer function(s);
 const mapDispatch = (dispatch) => {
 	return {
-		fetchRestaurantsThunk: () => dispatch(fetchRestaurantsThunk())
+		fetchRestaurantsThunk: () => dispatch(fetchRestaurantsThunk()),
+		currentRestaurantThunk: (restaurantId) => dispatch(currentRestaurantThunk(restaurantId))
+		
 	}
 }
 
