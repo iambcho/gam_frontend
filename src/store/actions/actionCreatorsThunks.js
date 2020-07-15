@@ -46,7 +46,7 @@ let arrayOfRestaurantsFromAPI = [
 			"zipcode": 11111,
 			"restaurantImage": "profile-picture.svg",
 			"cuisine": "Mexican",
-			"restaurantId": 1
+			"restaurantId": 3
 			
 		}
 
@@ -163,7 +163,8 @@ export const fetchRestaurantsThunk = () => (dispatch) => {
 }
 
 export const currentRestaurantThunk = (restaurant) => (dispatch) => {
-    dispatch(currentRestaurant(restaurant));
+	console.log(restaurant)	
+	dispatch(currentRestaurant(restaurant));
 }
 
 
