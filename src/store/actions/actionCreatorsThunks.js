@@ -23,7 +23,7 @@ let arrayOfRestaurantsFromAPI = [
 			"name": "Test Name2",
 			"hasFood": true,
 			"foodPrice": 10,
-			"hasCoffee": true,
+			"hasCoffee": false,
 			"coffeePrice": 10,
 			"hasDessert": true,
 			"dessertPrice": 10,
@@ -47,6 +47,21 @@ let arrayOfRestaurantsFromAPI = [
 			"restaurantImage": "profile-picture.svg",
 			"cuisine": "Mexican",
 			"restaurantId": 3
+			
+		},
+		{
+			"name": "Test Name4",
+			"hasFood": true,
+			"foodPrice": 10,
+			"hasCoffee": true,
+			"coffeePrice": 10,
+			"hasDessert": true,
+			"dessertPrice": 10,
+			"address": "Test Address4",
+			"zipcode": 11111,
+			"restaurantImage": "profile-picture.svg",
+			"cuisine": "Mexican",
+			"restaurantId": 1
 			
 		}
 
