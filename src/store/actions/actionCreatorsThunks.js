@@ -61,7 +61,7 @@ let arrayOfRestaurantsFromAPI = [
 			"zipcode": 11111,
 			"restaurantImage": "profile-picture.svg",
 			"cuisine": "Mexican",
-			"restaurantId": 1
+			"restaurantId": 4
 			
 		}
 

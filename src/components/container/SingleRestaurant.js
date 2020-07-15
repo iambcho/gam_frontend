@@ -24,6 +24,7 @@ class SingleRestaurant extends Component {
 			<div>
 				<SingleRestaurantView 
 					restaurants={this.props.restaurants}
+					restaurant={this.props.restaurant}
 					currentRestaurantThunk={this.props.currentRestaurantThunk}
 				/>
 			</div>
@@ -38,6 +39,7 @@ class SingleRestaurant extends Component {
 const mapState = (state) => {
 	return ({
 		restaurants: state.allRestaurants,
+		restaurant: state.currentRestaurant
 	})
 }
 
