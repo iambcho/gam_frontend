@@ -2,12 +2,16 @@ import React from 'react';
 import {Link, Image} from 'react-router-dom';
 import '../../App.css';
 import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
-import {Button, TextField, List, ListItem, Grid, Paper, Card, CardActions, CardContent} from '@material-ui/core';
+import {Button, Input, TextField, List, ListItem, Grid, Paper, Card, CardActions, CardContent} from '@material-ui/core';
 import { purple } from '@material-ui/core/colors';
+
 
 const AllRestaurantsView= (props) => {
 		//object destructuring that takes restaurants and any other things we add here from props
     const {restaurants} = props;
+    const inputZip = '11111'
+    const filteredRestaurants = restaurants.filter(restaurant => restaurant.zipcode == inputZip)
+    
 
     const style = {
         color: 'white',
@@ -33,8 +37,12 @@ const AllRestaurantsView= (props) => {
           flexGrow: 1,
         },
         paper: {
-          height: 140,
+          height: 100,
           width: 180,
+        },
+        icons: {
+          height: 50,
+          width: 50,
         },
         control: {
           padding: theme.spacing(2),
@@ -62,11 +70,9 @@ const AllRestaurantsView= (props) => {
 
           <br/>
 
-          <form className="zip-input">
-            <TextField id="outlined-basic" label="Enter zip code" variant="outlined"/>
-            <ColorButton variant="contained" color="black" className={classes.margin}>
-              Search
-            </ColorButton><br/>
+          <form onSubmit='' className="zip-input">
+            <Input id="input-zip" value='' onChange='' type="number" placeholder="Enter zip code" inputProps={{ 'aria-label': 'description' }} />           
+            <ColorButton type="submit" variant="contained" className={classes.margin} onClick=''>Search</ColorButton><br/>
           </form><br/>
 
         <Grid 
@@ -83,17 +89,19 @@ const AllRestaurantsView= (props) => {
                 justify="center" 
                 alignItems="stretch">
 
-                   {restaurants.map((restaurant)=>{ 
+                   {filteredRestaurants.map((restaurant)=>{ 
                     return (
                       <Button onClick =''>
                       <Grid item> 
-                        <Paper style={{minHeight: 150, minWidth: 800, maxHeight: 100, overflow: 'auto', backgroundColor: '#f0f0f5', border: '1px solid white'}}> 
+                        <Paper style={{minHeight: 150, minWidth: 800, maxHeight: 170, overflow: 'auto', backgroundColor: '#f0f0f5', border: '1px solid white'}}> 
                           <List className="List">
-                            <ListItem className="ListItem" alignItems="center" justify="space-between">
-                              <Grid container xs={9} direction="row" justify="space-between" >
+                            <ListItem className="ListItem" alignItems="center">
+                              <Grid container xs={9} direction="row" >
+                                
                                 <Grid item xs={3}>
-                                  <img src={restaurant.restaurantImage}></img>
+                                  <img src={restaurant.restaurantImage} style={{position:'relative', top: '10px', width:'120px'}}></img>
                                 </Grid>
+
                                 <Grid item xs={7}>
                                   <div className={classes.paper}>
                                     <p>{restaurant.name}</p>
@@ -101,14 +109,17 @@ const AllRestaurantsView= (props) => {
                                     <p>{restaurant.address}</p>
                                   </div>
                                 </Grid>
-                                <Grid item xs={1} direction="row">
-                                  <Grid container xs={1} direction="row" justify="space-between">
-                                    <Grid item><p>{restaurant.hasFood}</p><img src='meal-icon.svg'></img></Grid>
-                                    <Grid item><p>{restaurant.hasCoffee}</p><img src='coffee-icon.svg'></img></Grid>
-                                    <Grid item><p>{restaurant.hasDessert}</p><img src='dessert-icon.svg'></img></Grid>
-                                  </Grid>
+
+                                <Grid item xs={12} justify="flex-end" direction="row" style={{position:'relative', right: '-130px', top: '-100px'}}>
+                                    <Grid container justify="flex-end" className={classes.root} spacing={1}>
+                                        <Grid item spacing={6}>
+                                          {restaurant.hasFood == true && <img src='meal-icon.svg'></img>}
+                                          {restaurant.hasCoffee == true && <img src='coffee-icon.svg'></img>}
+                                          {restaurant.hasDessert == true && <img src='dessert-icon.svg'></img>}
+                                        </Grid>
+                                    </Grid>
                                 </Grid>
-                              </Grid>
+                            </Grid>
                           </ListItem>
                           </List>
                       </Paper> <br/>
