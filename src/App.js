@@ -9,14 +9,15 @@ import React, { Component } from 'react';
 import './App.css';
 
 //These are all the component we need to run our application
-import AllStudents from "./components/container/AllStudents";
-import AddStudent from './components/container/AddStudent';
-import SingleStudent from './components/container/SingleStudent';
-import EditStudent from './components/container/EditStudent';
-import AllCampuses from "./components/container/AllCampuses";
-import SingleCampus from "./components/container/SingleCampus";
-import AddCampus from "./components/container/AddCampus";
-import EditCampus from './components/container/EditCampus';
+// import AllStudents from "./components/container/AllStudents";
+// import AddStudent from './components/container/AddStudent';
+// import SingleStudent from './components/container/SingleStudent';
+// import EditStudent from './components/container/EditStudent';
+// import AllCampuses from "./components/container/AllCampuses";
+// import SingleCampus from "./components/container/SingleCampus";
+// import AddCampus from "./components/container/AddCampus";
+// import EditCampus from './components/container/EditCampus';
+import HomePage from './components/container/HomePage';
 
 //This is needed in order to create a SPA (Single Page Application)
 //SPA's are useful in the sense that they allow the client to 
@@ -34,15 +35,16 @@ class AppContainer extends Component {
     //With Route component we cannot load up pre-built components
     //as a result we generate these functions that return the components.
     //This way we can render pages by passing them as functions (which arent pre-built)
-    const AppViewComponent = () => <AppView />
-    const AllStudentsComponent = () => <AllStudents />
-    const AddStudentComponent = () => <AddStudent/>
-    const SingleStudentComponent = () => <SingleStudent/>
-    const EditStudentComponent = () => <EditStudent/>
-    const SingleCampusComponent = () => <SingleCampus/>
-    const AllCampusesComponent = () => <AllCampuses/>
-    const AddCampusComponent = () => <AddCampus/>
-    const EditCampusComponent = () => <EditCampus/>
+    // const AppViewComponent = () => <AppView />
+    // const AllStudentsComponent = () => <AllStudents />
+    // const AddStudentComponent = () => <AddStudent/>
+    // const SingleStudentComponent = () => <SingleStudent/>
+    // const EditStudentComponent = () => <EditStudent/>
+    // const SingleCampusComponent = () => <SingleCampus/>
+    // const AllCampusesComponent = () => <AllCampuses/>
+    // const AddCampusComponent = () => <AddCampus/>
+    // const EditCampusComponent = () => <EditCampus/>
+		const HomePageComponent = () => <HomePage/>
 
     return (
       <div>
@@ -56,16 +58,15 @@ class AppContainer extends Component {
             <div className="App-header">
                 {/* Each Route Component needs a path prop followed by a render prop 
                 to be able to load to component at the appropriate url link */}
-                <Route exact path="/" render={AppViewComponent}/>
-                <Route exact path="/students" render={AllStudentsComponent}/>
-                {/* Add Students comment later You DUmmy */}
+                <Route exact path="/" render={HomePageComponent}/>
+                {/* <Route exact path="/students" render={AllStudentsComponent}/>
                 <Route exact path="/add_students" render={AddStudentComponent}/> 
                 <Route exact path="/single_student/:studentId" render={SingleStudentComponent}/>
                 <Route exact path="/edit_student" render={EditStudentComponent}/>
                 <Route exact path ="/single_campus" render = {SingleCampusComponent}/>
                 <Route exact path="/campuses" render={AllCampusesComponent}/>
                 <Route exact path="/add_campus" render={AddCampusComponent}/>
-                <Route exact path="/edit_campus" render={EditCampusComponent}/>
+                <Route exact path="/edit_campus" render={EditCampusComponent}/> */}
 
               </div>
           </div>
