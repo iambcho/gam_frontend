@@ -2,7 +2,10 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import '../../App.css';
 
-const AllRestaurantsView= () => {
+const AllRestaurantsView= (props) => {
+		//object destructuring that takes restaurants and any other things we add here from props
+    const {restaurants} = props;
+
     const style = {
         color: 'white',
         textDecoration: 'none'

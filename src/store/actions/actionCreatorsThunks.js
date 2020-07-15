@@ -2,6 +2,53 @@ import * as types from './actionTypes';
 // import { bindActionCreators } from 'redux';
 import axios from 'axios';
 
+//TEMPORARY DUMMY DATABASE FOR FRONTEND
+let arrayOfRestaurantsFromAPI = [
+		{
+			"name": "Test Name",
+			"hasFood": "True",
+			"foodPrice": 10,
+			"hasCoffee": "True",
+			"coffeePrice": 10,
+			"hasDessert": "True",
+			"dessertPrice": 10,
+			"address": "Test Address",
+			"zipcode": 11111,
+			"restaurantImage": "Test Image",
+			"restaurantId": 1
+			
+		},
+		{
+			"name": "Test Name2",
+			"hasFood": "True",
+			"foodPrice": 10,
+			"hasCoffee": "True",
+			"coffeePrice": 10,
+			"hasDessert": "True",
+			"dessertPrice": 10,
+			"address": "Test Address2",
+			"zipcode": 11111,
+			"restaurantImage": "Test Image2",
+			"restaurantId": 2
+			
+		},
+		{
+			"name": "Test Name3",
+			"hasFood": "True",
+			"foodPrice": 10,
+			"hasCoffee": "True",
+			"coffeePrice": 10,
+			"hasDessert": "True",
+			"dessertPrice": 10,
+			"address": "Test Address3",
+			"zipcode": 11111,
+			"restaurantImage": "Test Image3",
+			"restaurantId": 1
+			
+		}
+
+]
+
 /****************************** ACTION CREATOR ***************************/
 // //AUTH ---------
 // const getUser = user => {
@@ -98,15 +145,17 @@ const currentRestaurant = (restaurant) => {
 // }
 
 export const fetchRestaurantsThunk = () => (dispatch) => {
-	//this needs to be changed depending on backend
-	axios.get('http://localhost:1234/api/studysessions/users/1')
-	.then((response) =>{
-			dispatch(fetchRestaurants(response.data));
-	})
-	.then((error)=>{
-			console.log(error);
-	});
-	// console.log("fetch restaurants thunk");
+	// //this needs to be changed depending on backend
+	// axios.get('http://localhost:1234/api/studysessions/users/1')
+	// .then((response) =>{
+	// 		dispatch(fetchRestaurants(response.data));
+	// })
+	// .then((error)=>{
+	// 		console.log(error);
+	// });
+	console.log("fetch restaurants thunk");
+
+	dispatch(fetchRestaurants(arrayOfRestaurantsFromAPI))
 	
 }
 
