@@ -5,14 +5,14 @@ import axios from 'axios';
 //TEMPORARY DUMMY DATABASE FOR FRONTEND
 let arrayOfRestaurantsFromAPI = [
 		{
-			"name": "Test Name",
+			"name": "Don Pedro's",
 			"hasFood": true,
 			"foodPrice": 10,
 			"hasCoffee": true,
 			"coffeePrice": 10,
 			"hasDessert": true,
 			"dessertPrice": 10,
-			"address": "Test Address",
+			"address": "43 Post St, San Jose, CA 95113",
 			"zipcode": 11111,
 			"restaurantImage": "profile-picture.svg",
 			"cuisine": "Mexican",
@@ -29,7 +29,7 @@ let arrayOfRestaurantsFromAPI = [
 			"dessertPrice": 10,
 			"address": "Test Address2",
 			"zipcode": 11111,
-			"restaurantImage": "profile-picture.svg",
+			"restaurantImage": "profile-picture2.svg",
 			"cuisine": "Mexican",
 			"restaurantId": 2
 			
@@ -44,7 +44,7 @@ let arrayOfRestaurantsFromAPI = [
 			"dessertPrice": 10,
 			"address": "Test Address3",
 			"zipcode": 11111,
-			"restaurantImage": "profile-picture.svg",
+			"restaurantImage": "profile-picture3.svg",
 			"cuisine": "Mexican",
 			"restaurantId": 3
 			
