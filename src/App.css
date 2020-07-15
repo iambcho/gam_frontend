@@ -194,3 +194,29 @@ input[type=number].studentID {
   margin: 10px;
   background-color: white;
 }
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-family: 'Overpass';
+  font-weight: 'bold';
+}
+
+.nav-link:hover {
+  text-decoration: none;
+  color: '#1E201F';
+  background-color: none;
+}
+
+p {
+  text-align: left;
+  font-family: 'IBM Plex Serif';
+  font-weight: 'Medium';
+  font-size: 18px;
+}
+
+.mission-grid {
+  padding-top: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
