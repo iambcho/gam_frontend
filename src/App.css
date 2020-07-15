@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;700&family=Overpass:wght@400;700;800;900&display=swap');
+
 .container {
   width: 100%;
 }
@@ -191,4 +193,30 @@ input[type=number].studentID {
   padding: 40px 40px 40px 40px;
   margin: 10px;
   background-color: white;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-family: 'Overpass';
+  font-weight: 'bold';
+}
+
+.nav-link:hover {
+  text-decoration: none;
+  color: '#1E201F';
+  background-color: none;
+}
+
+p {
+  text-align: left;
+  font-family: 'IBM Plex Serif';
+  font-weight: 'Medium';
+  font-size: 18px;
+}
+
+.mission-grid {
+  padding-top: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
