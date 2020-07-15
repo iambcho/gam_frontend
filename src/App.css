@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;700&family=Overpass:wght@400;700;800;900&display=swap');
 
+
 .container {
   width: 100%;
 }
@@ -59,11 +60,11 @@ html {
   padding: 10px 20px 20px 20px;
   margin: 10px;
   background-color: white;
-  border: 3px solid #667292;
+  border: 3px solid #EFEFEF;
 }
 
 .all-students-box:hover , .all-campuses-box:hover{
-  background-color: #bbd4ec;
+  background-color: #EFEFEF;
 } 
 
 .all-students-box p {
@@ -96,13 +97,13 @@ li {
 }
 
 li:hover{
-  background-color: rgb(106, 123, 168);
+  background-color: #EFEFEF;
 }
 
 h1{
   /* display: inline-block; */
-  font-family: monospace;
-  font-size: 35px;
+  font-family: 'Overpass';
+  font-size: 48px;
   margin: 0;
   padding: 0;
 }
@@ -182,18 +183,6 @@ input[type=number].studentID {
   justify-content: left;
 }
 
-.restaurant-card {
-  display: inline-block;
-  text-align: left;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
-  border-radius: 50px;
-  color: black;
-  width: 800px;
-  padding: 40px 40px 40px 40px;
-  margin: 10px;
-  background-color: white;
-}
-
 .nav-link {
   color: white;
   text-decoration: none;
@@ -214,6 +203,13 @@ p {
   font-family: 'IBM Plex Serif';
   font-weight: 'Medium';
   font-size: 18px;
+}
+
+.address {
+  text-align: left;
+  font-family: 'IBM Plex Serif';
+  font-weight: 'Medium';
+  font-size: 12px;
 }
 
 .mission-grid {

@@ -38,7 +38,7 @@ const AllRestaurantsView= (props) => {
         },
         paper: {
           height: 100,
-          width: 180,
+          width: 220,
         },
         icons: {
           height: 50,
@@ -93,7 +93,7 @@ const AllRestaurantsView= (props) => {
                     return (
                       <Button onClick =''>
                       <Grid item> 
-                        <Paper style={{minHeight: 150, minWidth: 800, maxHeight: 170, overflow: 'auto', backgroundColor: '#f0f0f5', border: '1px solid white'}}> 
+                        <Paper elevation={5} style={{minHeight: 100, minWidth: 800, maxHeight: 170, overflow: 'auto', backgroundColor: 'white', border: '1px solid white'}}> 
                           <List className="List">
                             <ListItem className="ListItem" alignItems="center">
                               <Grid container xs={9} direction="row" >
@@ -105,8 +105,8 @@ const AllRestaurantsView= (props) => {
                                 <Grid item xs={7}>
                                   <div className={classes.paper}>
                                     <p>{restaurant.name}</p>
-                                    <p>{restaurant.cuisine}</p>
-                                    <p>{restaurant.address}</p>
+                                    <p className='address'>{restaurant.cuisine}</p>
+                                    <p className='address'>{restaurant.address}</p>
                                   </div>
                                 </Grid>
 
