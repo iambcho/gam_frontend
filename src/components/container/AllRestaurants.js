@@ -33,7 +33,7 @@ class AllRestaurants extends Component {
 // The values of these keys reflect the value of the piece of state in your Redux store;
 const mapState = (state) => {
 	return({
-		restaurants: state.restaurants,
+		restaurants: state.allRestaurants,
 	})
 }
 
