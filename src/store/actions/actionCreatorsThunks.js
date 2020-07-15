@@ -16,41 +16,22 @@ import axios from 'axios';
 // 	}
 // }
 
-//SESSIONS ---------
-const fetchSessions = (all_sessions) => {
-    return{
-        type: types.FETCH_SESSIONS,
-        payload: all_sessions
-    }
+//RESTAURANTS ---------
+const fetchRestaurants = (all_restaurants) => {
+		return{
+				type: types.FETCH_RESTAURANTS,
+				payload: all_restaurants
+		}
 }
 
-// const addStudySession = (study_session) => {
-//     return {
-//         type: types.ADD_STUDY_SESSION,
-//         payload: study_session
-//     }
-// }
-
-const currentStudySession = (study_session) => {
-    return {
-        type: types.CURRENT_STUDY_SESSION,
-        payload: study_session
-    }
+const currentRestaurant = (restaurant) => {
+		return {
+				type: types.CURRENT_RESTAURANT,
+				payload: restaurant
+		}
 }
 
-// const fetchCurrentVideo = (videoUrl) => {
-//     return {
-//         type: types.CURRENT_VIDEO,
-//         payload: videoUrl
-//     }
-// }
 
-// const deleteStudySession = (session) => {
-//     return {
-//         type: types.DELETE_STUDY_SESSION,
-//         payload: session,
-//     }
-// }
 
 //-----------------------------------------------------------------------------
 
@@ -105,49 +86,33 @@ const currentStudySession = (study_session) => {
 /**This function takes @id, which is the id of the individual user that is logged on
  * and then it requests from the backend the sessions the user has.
  */
-export const fetchSessionsThunk = (id) => (dispatch) => {
-    axios.get(`/api/studysessions/users/${id}`)
-    .then((response) =>{
-        dispatch(fetchSessions(response.data));
-    })
-    .then((error)=>{
-        console.log(error);
-    });    
-}
-
-/**This function takes @study_session, which is the study session object the user is
- * creating and it posts this session into our data base
- */
-// export const addStudySessionThunk = (study_session) => (dispatch) => {
-//     axios.post('/api/studysessions/add', study_session)
-//     .then((response) => {
-//         // console.log("the study session data is: ", response.data);
-//         return response.data;
+//VERSION FOR AUTH
+// export const fetchSessionsThunk = (id) => (dispatch) => {
+//     axios.get(`/api/studysessions/users/${id}`)
+//     .then((response) =>{
+//         dispatch(fetchSessions(response.data));
 //     })
-//     .then((study_session) => dispatch(addStudySession(study_session)))
-//     .catch((error) => {
+//     .then((error)=>{
 //         console.log(error);
-//     })
+//     });    
 // }
 
-/**This function takes @study_session, as the session the user hover overs and clicks
- * and then it ensure the current study session state is updated with this object
- */
-export const currStudySessionThunk = (study_session) => (dispatch) => {
-    //we can do this in one line, instead of storing in a variable I believe
-    let resolvedActionObject = currentStudySession(study_session);
-    dispatch(resolvedActionObject);
+export const fetchRestaurantsThunk = () => (dispatch) => {
+	//this needs to be changed depending on backend
+	axios.get('http://localhost:1234/api/studysessions/users/1')
+	.then((response) =>{
+			dispatch(fetchRestaurants(response.data));
+	})
+	.then((error)=>{
+			console.log(error);
+	});
+	// console.log("fetch restaurants thunk");
+	
 }
 
-/**This function takes @session, which is the entire session and it removes it from
- * our table. Becauase one session has many notes it must also delete the notes.
- * To do this we added special property called {onDelete: 'cascade', hooks:true} that 
- * delete notes associated to a session autmatically. ^this snppet is in server/database/models/index,js
-*/
-// export const deleteStudySessionThunk = (session) => (dispatch) => {
-//     (axios.delete(`/api/studysessions/delete/${session.id}`))
-//     .then(() => dispatch(deleteStudySession(session.id)));
-// }
+export const currentRestaurantThunk = (restaurant) => (dispatch) => {
+    dispatch(currentRestaurant(restaurant));
+}
 
 
 
