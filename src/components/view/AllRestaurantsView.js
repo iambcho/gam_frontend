@@ -115,8 +115,8 @@ const AllRestaurantsView= (props) => {
 																				
 																			</p>
 																		{/* </Button> */}
-                                    <p>{restaurant.cuisine}</p>
-                                    <p>{restaurant.address}</p>
+                                    <p className='address'>{restaurant.cuisine}</p>
+                                    <p className='address'>{restaurant.address}</p>
 
                                   </div>
                                 </Grid>
