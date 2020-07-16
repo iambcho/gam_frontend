@@ -84,7 +84,7 @@ const HomePageView = () => {
         <Grid item xs={12}>
           <form onSubmit='' className="zip-input">
             <Input id="input-zip" value='' onChange='' type="number" placeholder="Enter zip code" inputProps={{ 'aria-label': 'description' }} />
-            <ColorButton type="submit" variant="contained" className={classes.margin} onClick=''>Search</ColorButton><br />
+            <button type="submit" variant="contained" className='the-button' onClick=''>Search</button><br />
           </form><br />
         </Grid>
       </Grid>

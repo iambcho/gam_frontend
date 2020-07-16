@@ -100,7 +100,7 @@ const CheckoutView= (props) => {
 													<p style={{textAlign:"right"}}>{`$${(restaurant.foodPrice * restaurant.foodAmount)+(restaurant.coffeePrice * restaurant.coffeeAmount)+(restaurant.dessertPrice * restaurant.dessertAmount)}`}</p>
 													</Grid>
 												</Grid>
-                    <Grid item ><Link to="/confirmation"><Button variant="contained" color="secondary" style={{position:'relative', top:'25px', width:'200px', height: '70px'}}>Pay with PayPal</Button></Link></Grid>
+                    <Grid item ><Link to="/confirmation"><button variant="contained" className='the-button' style={{position:'relative', top:'25px', background: '#FF4D49'}}>Pay with PayPal</button></Link></Grid>
                 </Grid>
                 </Paper>
             </Grid>
