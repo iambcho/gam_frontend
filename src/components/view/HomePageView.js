@@ -6,8 +6,9 @@ import { Link } from 'react-router-dom';
 
 // Styling for App
 import '../../App.css';
-import { Button, TextField, List, ListItem, Grid, Paper, Card, CardActions, CardContent } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import { Button, Input, TextField, List, ListItem, Grid, Paper, Card, CardActions, CardContent } from '@material-ui/core';
+import { purple } from '@material-ui/core/colors';
 
 const HomePageView = () => {
   const styles = {
@@ -18,9 +19,49 @@ const HomePageView = () => {
       color: '#B4B4B4',
       fontSize: '20px',
       fontFamily: 'Overpass',
-      fontWeight: '600px'
+      fontWeight: '600'
+    },
+    homeText: {
+      textAlign: 'center'
+    },
+    gridItem: {
+      textAlign: 'center',
+      align: 'center',
+      verticalAlign: 'center'
     }
   }
+
+  const ColorButton = withStyles((theme) => ({
+    root: {
+      color: theme.palette.getContrastText(purple[500]),
+      backgroundColor: purple[500],
+      '&:hover': {
+        backgroundColor: purple[700],
+      },
+    },
+  }))(Button);
+
+  const useStyles = makeStyles((theme) => ({
+    root: {
+      flexGrow: 1,
+    },
+    paper: {
+      height: 100,
+      width: 220,
+    },
+    icons: {
+      height: 50,
+      width: 50,
+    },
+    control: {
+      padding: theme.spacing(2),
+    },
+    margin: {
+      margin: theme.spacing(1),
+    }
+  }));
+
+  const classes = useStyles();
 
   return (
     <div className="container">
@@ -44,18 +85,26 @@ const HomePageView = () => {
 
       <Grid container className='content-grid' spacing={2}>
         <Grid item xs={12}>
-          <form className="zip-input">
-            <TextField className="text-field" label="Enter zip code" variant="outlined" />
-            <Button variant="contained" color="primary">
-              Search
-            </Button><br />
+          <form onSubmit='' className="zip-input">
+            <Input id="input-zip" value='' onChange='' type="number" placeholder="Enter zip code" inputProps={{ 'aria-label': 'description' }} />
+            <ColorButton type="submit" variant="contained" className={classes.margin} onClick=''>Search</ColorButton><br />
           </form><br />
         </Grid>
       </Grid>
-      <Grid container spacing={2}>
 
-
-
+      <Grid container className='content-grid' spacing={2}>
+        <Grid className={styles.gridItem} item xs={4} s={6}>
+          <img src="money-icon-white.svg" />
+          <p className={styles.homeText}><b>Donate to a restaurant</b></p>
+        </Grid>
+        <Grid className="styles.gridItem" item xs={4} s={6}>
+          <img src="take-out-icon-white.svg" />
+          <p className={styles.homeText}><b>Food is sent to those in need</b></p>
+        </Grid>
+        <Grid className="styles.gridItem" item xs={4} s={6}>
+          <img src="happy-icon-white.svg" />
+          <p className={styles.homeText}><b>Restaurants and recipients are happy</b></p>
+        </Grid>
       </Grid>
     </div>
   );
