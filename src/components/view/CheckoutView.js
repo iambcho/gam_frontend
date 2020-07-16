@@ -101,6 +101,11 @@ const CheckoutView= (props) => {
 													</Grid>
 												</Grid>
                     <Grid item ><Link to="/confirmation"><button variant="contained" className='the-button' style={{position:'relative', top:'25px', background: '#FF4D49'}}>Pay with PayPal</button></Link></Grid>
+										{/* <Grid item >
+											<div id="paypal-button"></div>
+											<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+											<script src="../scripts/paypal.js"></script>
+										</Grid> */}
                 </Grid>
                 </Paper>
             </Grid>
