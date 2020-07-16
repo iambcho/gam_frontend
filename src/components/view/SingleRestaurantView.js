@@ -3,8 +3,12 @@ import {Link} from 'react-router-dom';
 import '../../App.css';
 
 import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
-import {Button, Input, TextField, List, ListItem, Grid, Paper, Card, CardActions, CardContent} from '@material-ui/core';
+import {Button, Input, TextField, List, ListItem, Grid, Paper, Card, CardActions, CardContent, Avatar} from '@material-ui/core';
 import { purple } from '@material-ui/core/colors';
+import Select from '@material-ui/core/Select';
+import FormControl from '@material-ui/core/FormControl';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
 
 const AllRestaurantsView= (props) => {
 		//destructuring from props 
@@ -80,17 +84,75 @@ const AllRestaurantsView= (props) => {
 						justify="center" 
 						alignItems="stretch"	>
 							<Paper elevation={5} style={{minHeight: 500, minWidth: 800, overflow: 'auto', backgroundColor: 'white', border: '1px solid white'}}>
-							<Grid item style={{padding:"20px"}}>
+							<Grid item style={{paddingLeft:"20px"}}>
 								<h1 style={{textAlign:"left"}}>{restaurant.name}</h1>
 								<p>{restaurant.address}</p>
 								<p>{restaurant.zipcode}</p>
-								<h4 style={{textAlign:"left"}}>Donate</h4>
+								<h4 style={{textAlign:"left", marginBottom:"0px"}}>Donate</h4>
 
 							</Grid>
-							<Grid item style={{padding:"20px"}}>
-								<Grid item>Test1</Grid>
-								<Grid item>Test2</Grid>
-								<Grid item>Test3</Grid>
+							
+							<Grid 
+								container 
+								style={{paddingLeft:"70px"}} 
+								direction="row"
+								spacing={2}
+								>
+								{restaurant.hasFood === true 
+								? <Grid item xs={4}>
+									<p>{`1 meal for $${restaurant.foodPrice}`}</p>
+									<p style={{ fontWeight:"bold" }}>How many meals?</p>
+									<FormControl style={{minWidth:130, marginRight:"75px"}}>
+									<InputLabel id="demo-simple-select-label">Amount</InputLabel>
+										<Select
+											labelId="demo-simple-select-label"
+											id="demo-simple-select"
+										>
+											<MenuItem value={11}>1</MenuItem>
+											<MenuItem value={20}>2</MenuItem>
+											<MenuItem value={30}>3</MenuItem>
+											<MenuItem value={30}>4</MenuItem>
+											<MenuItem value={30}>5</MenuItem>
+										</Select>
+										</FormControl>
+
+									</Grid>:""}
+								{restaurant.hasCoffee === true 
+								? <Grid item xs={4}>
+									<p>{`1 coffee for $${restaurant.coffeePrice}`}</p>
+									<p style={{ fontWeight:"bold" }}>How many coffees?</p>
+									<FormControl style={{minWidth:130, marginRight:"75px"}}>
+									<InputLabel id="demo-simple-select-label">Amount</InputLabel>
+										<Select
+											labelId="demo-simple-select-label"
+											id="demo-simple-select"
+										>
+											<MenuItem value={11}>1</MenuItem>
+											<MenuItem value={20}>2</MenuItem>
+											<MenuItem value={30}>3</MenuItem>
+											<MenuItem value={30}>4</MenuItem>
+											<MenuItem value={30}>5</MenuItem>
+										</Select>
+										</FormControl>
+									</Grid>:""}
+								{restaurant.hasDessert === true 
+								? <Grid item xs={4}>
+									<p>{`1 dessert for $${restaurant.dessertPrice}`}</p>
+									<p style={{ fontWeight:"bold" }}>How many desserts?</p>
+									<FormControl style={{minWidth:130, marginRight:"75px"}}>
+									<InputLabel id="demo-simple-select-label">Amount</InputLabel>
+										<Select
+											labelId="demo-simple-select-label"
+											id="demo-simple-select"
+										>
+											<MenuItem value={11}>1</MenuItem>
+											<MenuItem value={20}>2</MenuItem>
+											<MenuItem value={30}>3</MenuItem>
+											<MenuItem value={30}>4</MenuItem>
+											<MenuItem value={30}>5</MenuItem>
+										</Select>
+										</FormControl>
+									</Grid>:""}
 							</Grid>
 							</Paper>
 						
