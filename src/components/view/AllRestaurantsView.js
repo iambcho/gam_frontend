@@ -62,9 +62,9 @@ const AllRestaurantsView = (props) => {
       <br />
 
       <form onSubmit='' className="zip-input">
-        <Input id="input-zip" placeholder="Enter zip code" />
+        <Input id="input-zip" style={{ fontFamily: 'Overpass', fontSize: '20px' }} placeholder="Enter zip code" />
         <Link to={`/restaurants`}>
-          <button type="submit" variant="contained" className='the-button' onClick=''>Search</button><br />
+          <button type="submit" style={{ fontFamily: 'Overpass', fontSize: '20px' }} variant="contained" className='the-button' onClick=''>Search</button><br />
         </Link>
       </form><br />
 
