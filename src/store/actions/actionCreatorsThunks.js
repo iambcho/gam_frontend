@@ -11,7 +11,7 @@ let arrayOfRestaurantsFromAPI = [
 			"foodAmount": 0,
 			"hasCoffee": true,
 			"coffeePrice": 3,
-			"coffeeAmount": 0,
+			"coffeeAmount": 100,
 			"hasDessert": true,
 			"dessertPrice": 5,
 			"dessertAmount": 0,
