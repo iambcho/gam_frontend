@@ -39,7 +39,7 @@ const AllRestaurantsView= (props) => {
         },
         paper: {
           height: 100,
-          width: 220,
+          width: 300,
         },
         icons: {
           height: 50,
@@ -108,7 +108,7 @@ const AllRestaurantsView= (props) => {
                                   <div className={classes.paper}>
 
                                     {/* <Button > */}
-																			<p>
+																			<p className='restaurant-title'>
 																				
 																					{restaurant.name}
 																				

@@ -20,32 +20,32 @@ let arrayOfRestaurantsFromAPI = [
 			
 		},
 		{
-			"name": "Test Name2",
+			"name": "Tea Alley",
 			"hasFood": true,
 			"foodPrice": 10,
 			"hasCoffee": false,
 			"coffeePrice": 10,
 			"hasDessert": true,
 			"dessertPrice": 10,
-			"address": "Test Address2",
+			"address": "40 S 1st St, San Jose, CA 95113",
 			"zipcode": 11111,
 			"restaurantImage": "profile-picture2.svg",
-			"cuisine": "Mexican",
+			"cuisine": "Bubble Tea",
 			"restaurantId": 2
 			
 		},
 		{
-			"name": "Test Name3",
+			"name": "Back A Yard Caribbean Grill",
 			"hasFood": true,
 			"foodPrice": 10,
-			"hasCoffee": true,
+			"hasCoffee": false,
 			"coffeePrice": 10,
 			"hasDessert": true,
 			"dessertPrice": 10,
-			"address": "Test Address3",
+			"address": "80 N Market St, San Jose, CA 95113",
 			"zipcode": 11111,
 			"restaurantImage": "profile-picture3.svg",
-			"cuisine": "Mexican",
+			"cuisine": "Caribbean",
 			"restaurantId": 3
 			
 		},
