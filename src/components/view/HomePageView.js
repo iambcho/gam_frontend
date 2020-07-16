@@ -61,7 +61,7 @@ const HomePageView = () => {
           </Link></li>
           <li><Link className="nav-link" style={styles.pageSelected} to="/">HOME</Link></li>
           <li><Link className="nav-link" to="/mission">OUR MISSION</Link></li>
-          <li><a className="nav-link" href="http://gam-covid-assistant.mybluemix.net/">HELP</a></li>
+          {/* <li><a className="nav-link" href="http://gam-covid-assistant.mybluemix.net/">HELP</a></li> */}
         </ul>
       </div>
       <br />
