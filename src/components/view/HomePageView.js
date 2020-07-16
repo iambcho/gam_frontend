@@ -62,6 +62,7 @@ const HomePageView = (props) => {
           </Link></li>
           <li><Link className="nav-link" style={styles.pageSelected} to="/">HOME</Link></li>
           <li><Link className="nav-link" to="/mission">OUR MISSION</Link></li>
+          {/* <li><a className="nav-link" href="http://gam-covid-assistant.mybluemix.net/">HELP</a></li> */}
         </ul>
       </div>
       <br />
@@ -74,29 +75,30 @@ const HomePageView = (props) => {
       <Grid container className='content-grid' spacing={2}>
         <Grid item xs={12}>
           <form onSubmit='' className="zip-input">
-            <Input id="input-zip" placeholder="Enter zip code" onChange={''}/>
-						<Link to={`/restaurants`}>
-            <button type="submit" variant="contained" className='the-button' onClick=''>Search</button><br />
-						</Link>
+
+            <Input id="input-zip" style={{ fontFamily: 'Overpass', fontSize: '20px' }} placeholder="Enter zip code" />
+            <Link to={`/restaurants`}>
+              <button style={{ fontFamily: 'Overpass', fontSize: '20px' }} type="submit" variant="contained" className='the-button' onClick=''>Search</button><br />
+            </Link>
           </form><br />
         </Grid>
       </Grid>
 
       <Grid container className='content-grid' spacing={2} >
         <Grid item xs={6}>
-          <img style={{position:'relative', left:'170px', width:'800px'}} src='diagram.svg'></img>
+          <img style={{ position: 'relative', left: '170px', width: '800px' }} src='diagram.svg'></img>
         </Grid>
       </Grid>
 
-      <Grid container className='content-grid' justify='space-evenly' spacing={2} style={{position:'relative', left: '-10px', bottom:'20px'}}>
+      <Grid container className='content-grid' justify='space-evenly' spacing={2} style={{ position: 'relative', left: '-10px', bottom: '20px' }}>
         <Grid className={styles.gridItem} item xs={2} s={10}>
-          <p className={styles.homeSubtitles} style={{fontSize: '20px', textAlign:'center'} }><b>Donate to a restaurant</b></p>
+          <p className={styles.homeSubtitles} style={{ fontSize: '20px', textAlign: 'center' }}><b>Donate to a restaurant</b></p>
         </Grid>
         <Grid className="styles.gridItem" item xs={2} s={10}>
-          <p className={styles.homeSubtitles} style={{fontSize: '20px', textAlign:'center'}}><b>Food is sent to those in need</b></p>
+          <p className={styles.homeSubtitles} style={{ fontSize: '20px', textAlign: 'center' }}><b>Food is sent to those in need</b></p>
         </Grid>
         <Grid className="styles.gridItem" item xs={2} s={10}>
-          <p className={styles.homeSubtitles} style={{fontSize: '20px', textAlign:'center'}}><b>Restaurants and recipients are happy</b></p>
+          <p className={styles.homeSubtitles} style={{ fontSize: '20px', textAlign: 'center' }}><b>Restaurants and recipients are happy</b></p>
         </Grid>
       </Grid>
     </div>
