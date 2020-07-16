@@ -121,7 +121,7 @@ const AllRestaurantsView = (props) => {
                                 {
                                   restaurant.restaurantId === currentRestaurant.restaurantId
                                     ? <Link to={`/restaurant/${restaurant.restaurantId}`}>
-                                      <button className='the-button' style={{ position: 'relative', bottom: '35px', right: '-20px' }}>
+                                      <button className='the-button' style={{ position: 'relative', bottom: '35px', right: '-20px', fontFamily: 'Overpass' }}>
                                         Select
 																								</button>
                                     </Link>
