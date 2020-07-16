@@ -154,6 +154,29 @@ const AllRestaurantsView= (props) => {
 										</FormControl>
 									</Grid>:""}
 							</Grid>
+							<Grid item style={{paddingLeft:"20px"}}>
+							<h4 style={{textAlign:"left", marginBottom:"0px"}}>Donate Where?</h4>
+							</Grid>
+							<br/>
+							<Grid 
+							container 
+							style={{paddingLeft:"20px"}}
+							direction="row"
+							spacing={2}>
+								<Grid item xs={2}>
+									<ColorButton>Hospital</ColorButton>	
+								</Grid>
+								<Grid item xs={2}>
+									<ColorButton>Shelter</ColorButton>	
+								</Grid>
+							</Grid>
+							<br/>
+							<Grid item>
+								<Link to={`/checkout`}>
+								<ColorButton>Checkout</ColorButton>
+								</Link>
+							</Grid>
+							<br/>
 							</Paper>
 						
 					</Grid>
