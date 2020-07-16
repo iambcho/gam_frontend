@@ -21,9 +21,6 @@ const HomePageView = () => {
       fontFamily: 'Overpass',
       fontWeight: '600'
     },
-    homeText: {
-      textAlign: 'center'
-    },
     gridItem: {
       textAlign: 'center',
       align: 'center',
@@ -79,7 +76,7 @@ const HomePageView = () => {
       <br />
       <Grid container className='content-grid' spacing={2}>
         <Grid item xs={12}>
-          <p>Support restaurants, healthcare workers, and people in need due to the pandemic by donating meals, coffees, and desserts!</p>
+          <p className='home-font'>Support restaurants, healthcare workers, and people in need due to the pandemic by donating meals, coffees, and desserts!</p>
         </Grid>
       </Grid>
 
@@ -92,18 +89,21 @@ const HomePageView = () => {
         </Grid>
       </Grid>
 
-      <Grid container className='content-grid' spacing={2}>
-        <Grid className={styles.gridItem} item xs={4} s={6}>
-          <img src="money-icon-white.svg" />
-          <p className={styles.homeText}><b>Donate to a restaurant</b></p>
+      <Grid container className='content-grid' spacing={2} >
+        <Grid item xs={6}>
+          <img style={{position:'relative', left:'170px', width:'800px'}} src='diagram.svg'></img>
         </Grid>
-        <Grid className="styles.gridItem" item xs={4} s={6}>
-          <img src="take-out-icon-white.svg" />
-          <p className={styles.homeText}><b>Food is sent to those in need</b></p>
+      </Grid>
+
+      <Grid container className='content-grid' justify='space-evenly' spacing={2} style={{position:'relative', left: '-10px', bottom:'20px'}}>
+        <Grid className={styles.gridItem} item xs={2} s={10}>
+          <p className={styles.homeSubtitles} style={{fontSize: '20px', textAlign:'center'} }><b>Donate to a restaurant</b></p>
         </Grid>
-        <Grid className="styles.gridItem" item xs={4} s={6}>
-          <img src="happy-icon-white.svg" />
-          <p className={styles.homeText}><b>Restaurants and recipients are happy</b></p>
+        <Grid className="styles.gridItem" item xs={2} s={10}>
+          <p className={styles.homeSubtitles} style={{fontSize: '20px', textAlign:'center'}}><b>Food is sent to those in need</b></p>
+        </Grid>
+        <Grid className="styles.gridItem" item xs={2} s={10}>
+          <p className={styles.homeSubtitles} style={{fontSize: '20px', textAlign:'center'}}><b>Restaurants and recipients are happy</b></p>
         </Grid>
       </Grid>
     </div>
