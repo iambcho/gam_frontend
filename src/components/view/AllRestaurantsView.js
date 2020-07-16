@@ -10,7 +10,7 @@ const AllRestaurantsView= (props) => {
 		//object destructuring that takes restaurants and any other things we add here from props
 
     const {restaurants, currentRestaurant, currentRestaurantThunk} = props;
-    const inputZip = '11111'
+    const inputZip = '95113'
     const filteredRestaurants = restaurants.filter(restaurant => restaurant.zipcode == inputZip)
     
 
