@@ -14,12 +14,12 @@ let arrayOfRestaurantsFromAPI = [
 			"coffeeAmount": 100,
 			"hasDessert": true,
 			"dessertPrice": 5,
-			"dessertAmount": 0,
+			"dessertAmount": 100,
 			"address": "43 Post St, San Jose, CA 95113",
 			"zipcode": 11111,
 			"restaurantImage": "profile-picture.svg",
 			"cuisine": "Mexican",
-			"donateWhere": "Hospital",
+			"donateTo": "Hospital",
 			"restaurantId": 1
 			
 		},
