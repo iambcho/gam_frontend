@@ -164,16 +164,16 @@ const AllRestaurantsView= (props) => {
 							direction="row"
 							spacing={2}>
 								<Grid item xs={2}>
-									<ColorButton>Hospital</ColorButton>	
+									<button className='the-button'>Hospital</button>	
 								</Grid>
 								<Grid item xs={2}>
-									<ColorButton>Shelter</ColorButton>	
+									<button className='the-button'>Shelter</button>	
 								</Grid>
 							</Grid>
 							<br/>
 							<Grid item>
 								<Link to={`/checkout/${restaurant.restaurantId}`}>
-								<ColorButton>Checkout</ColorButton>
+								<button className='the-button'>Checkout</button>
 								</Link>
 							</Grid>
 							<br/>

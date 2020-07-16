@@ -37,7 +37,7 @@ const ConfirmationView = (props) => {
                     <Grid item ><h1 style={{position:'relative', top:'80px'}}>Thank you for your donation!</h1></Grid>
                     <Grid item ><img src='happy.svg' style={{width:'250px', position:'relative', top:'120px'}}></img></Grid>
                     <Grid item ><p style={{textAlign: "center", position:'relative', top:'140px'}}>Your donated food is now on its way to someone in need.</p></Grid>
-                    <Grid item ><Link to="/"><Button variant="contained" color="secondary" style={{position:'relative', top:'180px', width:'200px', height: '70px'}}>Give Again</Button></Link></Grid>
+                    <Grid item ><Link to="/"><button variant="contained" className='the-button' style={{position:'relative', top:'180px', background: '#FF4D49'}}>Give Again</button></Link></Grid>
                 </Grid>
                 </Paper>
             </Grid>

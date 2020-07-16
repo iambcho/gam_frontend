@@ -73,8 +73,8 @@ const AllRestaurantsView= (props) => {
 
           <form onSubmit='' className="zip-input">
             <Input id="input-zip" value='' onChange='' type="number" placeholder="Enter zip code" inputProps={{ 'aria-label': 'description' }} />           
-            <ColorButton type="submit" variant="contained" className={classes.margin} onClick=''>Search</ColorButton><br/>
-          </form><br/>
+            <button type="submit" variant="contained" className='the-button' onClick=''>Search</button><br />
+            </form><br/>
 
         <Grid 
             container 
@@ -129,9 +129,9 @@ const AllRestaurantsView= (props) => {
 																					{
 																						restaurant.restaurantId === currentRestaurant.restaurantId 
 																						? <Link to={`/restaurant/${restaurant.restaurantId}`}>
-																								<ColorButton style={{marginBottom:"70px", marginLeft:"15px"}}>
+																								<button className='the-button' style={{position:'relative', bottom:'35px', right:'-20px'}}>
 																									Select
-																								</ColorButton>
+																								</button>
 																							</Link>
 																						: ""
 
