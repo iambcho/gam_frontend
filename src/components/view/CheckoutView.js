@@ -38,10 +38,10 @@ const CheckoutView= (props) => {
                 <Grid container direction="column" justify="center" alignItems="center">
                     <Grid item><h1>Checkout</h1></Grid>
                     <Grid item><h2>Receipt</h2></Grid>
-										<Grid item><p>{`Thank you for supporting ${restaurant.name}!`}</p></Grid>
+										<Grid item><p>{`Thank you for supporting ${restaurant.name} and local ${restaurant.donateTo}s!`}</p></Grid>
                     <Grid 
 											container 
-											style={{paddingLeft:"70px"}} 
+											style={{padding:"50px"}}
 											direction="column"
 											spacing={2}
 											>
@@ -49,26 +49,58 @@ const CheckoutView= (props) => {
 											? <Grid 
 													container 
 													direction="row"
+													justify="space-between"
 													spacing={2}>
 													<Grid item xs={6}>
 													<p>{`${restaurant.foodAmount} meals`}</p>
 													</Grid>
 													<Grid item xs={6}>
-													<p>{`$${restaurant.foodPrice * restaurant.foodAmount}`}</p>
+													<p style={{textAlign:"right"}}>{`$${restaurant.foodPrice * restaurant.foodAmount}`}</p>
 													</Grid>
 												</Grid>:""}
 											{restaurant.coffeeAmount > 0  
-											? <Grid item xs={4}>
-											<p>{`${restaurant.coffeeAmount} coffees`}</p>
-											</Grid>:""}
+											? <Grid 
+													container 
+													direction="row"
+													justify="space-between"
+													spacing={2}>
+													<Grid item xs={6}>
+													<p>{`${restaurant.coffeeAmount} coffees`}</p>
+													</Grid>
+													<Grid item xs={6}>
+													<p style={{textAlign:"right"}}>{`$${restaurant.coffeePrice * restaurant.coffeeAmount}`}</p>
+													</Grid>
+												</Grid>:""}
 											{restaurant.dessertAmount > 0  
-											? <Grid item xs={4}>
-											<p>{`${restaurant.dessertAmount} desserts`}</p>
-											</Grid>:""}
+											? <Grid 
+													container 
+													direction="row"
+													justify="space-between"
+													spacing={2}>
+													<Grid item xs={6}>
+													<p>{`${restaurant.dessertAmount} desserts`}</p>
+													</Grid>
+													<Grid item xs={6}>
+													<p style={{textAlign:"right"}}>{`$${restaurant.dessertPrice * restaurant.dessertAmount}`}</p>
+													</Grid>
+												</Grid>:""}
 										</Grid>
-                    <Grid item><img src='line1.svg'></img></Grid>
-                    <Grid item><p>Total</p></Grid>
-                    <Grid item ><Link to="/confirmation"><Button variant="contained" color="secondary" style={{position:'relative', top:'180px', width:'200px', height: '70px'}}>Pay with PayPal</Button></Link></Grid>
+                    {/* <Grid item><img src='line1.svg'></img></Grid> */}
+                    <Grid 
+													container 
+													direction="row"
+													justify="space-between"
+													style={{borderTop:"black 1px solid", padding:"0px 50px"}}
+													
+													spacing={2}>
+													<Grid item xs={6}>
+													<p>{`Total`}</p>
+													</Grid>
+													<Grid item xs={6}>
+													<p style={{textAlign:"right"}}>{`$${(restaurant.foodPrice * restaurant.foodAmount)+(restaurant.coffeePrice * restaurant.coffeeAmount)+(restaurant.dessertPrice * restaurant.dessertAmount)}`}</p>
+													</Grid>
+												</Grid>
+                    <Grid item ><Link to="/confirmation"><Button variant="contained" color="secondary" style={{position:'relative', top:'25px', width:'200px', height: '70px'}}>Pay with PayPal</Button></Link></Grid>
                 </Grid>
                 </Paper>
             </Grid>
