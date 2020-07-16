@@ -112,17 +112,17 @@ const currentZipcode = (zipcode) => {
 // with a dispatch 
 
 export const fetchRestaurantsThunk = () => (dispatch) => {
-	// //this needs to be changed depending on backend
-	// axios.get('http://localhost:1234/api/studysessions/users/1')
-	// .then((response) =>{
-	// 		dispatch(fetchRestaurants(response.data));
-	// })
-	// .then((error)=>{
-	// 		console.log(error);
-	// });
-	console.log("fetch restaurants thunk");
+	//this needs to be changed depending on backend
+	axios.get('http://184.172.247.241:31337/api/restaurants')
+	.then((response) =>{
+			dispatch(fetchRestaurants(response.data));
+	})
+	.then((error)=>{
+			console.log(error);
+	});
+	// console.log("fetch restaurants thunk");
 
-	dispatch(fetchRestaurants(arrayOfRestaurantsFromAPI))
+	// dispatch(fetchRestaurants(arrayOfRestaurantsFromAPI))
 	
 }
 
