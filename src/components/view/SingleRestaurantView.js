@@ -83,7 +83,7 @@ const AllRestaurantsView= (props) => {
 						container direction="row"
 						justify="center" 
 						alignItems="stretch"	>
-							<Paper elevation={5} style={{minHeight: 500, minWidth: 800, overflow: 'auto', backgroundColor: 'white', border: '1px solid white'}}>
+							<Paper elevation={5} style={{minHeight: 400, minWidth: 800, overflow: 'auto', backgroundColor: 'white', border: '1px solid white'}}>
 							<Grid item style={{paddingLeft:"20px"}}>
 								<h1 style={{textAlign:"left"}}>{restaurant.name}</h1>
 								<p>{restaurant.address}</p>
@@ -108,11 +108,11 @@ const AllRestaurantsView= (props) => {
 											labelId="demo-simple-select-label"
 											id="demo-simple-select"
 										>
-											<MenuItem value={11}>1</MenuItem>
-											<MenuItem value={20}>2</MenuItem>
-											<MenuItem value={30}>3</MenuItem>
-											<MenuItem value={30}>4</MenuItem>
-											<MenuItem value={30}>5</MenuItem>
+											<MenuItem value={0}>0</MenuItem>
+											<MenuItem value={1}>1</MenuItem>
+											<MenuItem value={5}>5</MenuItem>
+											<MenuItem value={10}>10</MenuItem>
+											<MenuItem value={100}>100</MenuItem>
 										</Select>
 										</FormControl>
 
@@ -127,11 +127,11 @@ const AllRestaurantsView= (props) => {
 											labelId="demo-simple-select-label"
 											id="demo-simple-select"
 										>
-											<MenuItem value={11}>1</MenuItem>
-											<MenuItem value={20}>2</MenuItem>
-											<MenuItem value={30}>3</MenuItem>
-											<MenuItem value={30}>4</MenuItem>
-											<MenuItem value={30}>5</MenuItem>
+											<MenuItem value={0}>0</MenuItem>
+											<MenuItem value={1}>1</MenuItem>
+											<MenuItem value={5}>5</MenuItem>
+											<MenuItem value={10}>10</MenuItem>
+											<MenuItem value={100}>100</MenuItem>
 										</Select>
 										</FormControl>
 									</Grid>:""}
@@ -145,15 +145,38 @@ const AllRestaurantsView= (props) => {
 											labelId="demo-simple-select-label"
 											id="demo-simple-select"
 										>
-											<MenuItem value={11}>1</MenuItem>
-											<MenuItem value={20}>2</MenuItem>
-											<MenuItem value={30}>3</MenuItem>
-											<MenuItem value={30}>4</MenuItem>
-											<MenuItem value={30}>5</MenuItem>
+											<MenuItem value={0}>0</MenuItem>
+											<MenuItem value={1}>1</MenuItem>
+											<MenuItem value={5}>5</MenuItem>
+											<MenuItem value={10}>10</MenuItem>
+											<MenuItem value={100}>100</MenuItem>
 										</Select>
 										</FormControl>
 									</Grid>:""}
 							</Grid>
+							{/* <Grid item style={{paddingLeft:"20px"}}>
+							<h4 style={{textAlign:"left", marginBottom:"0px"}}>Donate Where?</h4>
+							</Grid>
+							<br/>
+							<Grid 
+							container 
+							style={{paddingLeft:"20px"}}
+							direction="row"
+							spacing={2}>
+								<Grid item xs={2}>
+									<ColorButton>Hospital</ColorButton>	
+								</Grid>
+								<Grid item xs={2}>
+									<ColorButton>Shelter</ColorButton>	
+								</Grid>
+							</Grid> */}
+							<br/>
+							<Grid item>
+								<Link to={`/checkout`}>
+								<ColorButton>Checkout</ColorButton>
+								</Link>
+							</Grid>
+							<br/>
 							</Paper>
 						
 					</Grid>

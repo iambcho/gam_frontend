@@ -8,14 +8,18 @@ let arrayOfRestaurantsFromAPI = [
 			"name": "Don Pedro's",
 			"hasFood": true,
 			"foodPrice": 10,
+			"foodAmount": 0,
 			"hasCoffee": true,
 			"coffeePrice": 3,
+			"coffeeAmount": 100,
 			"hasDessert": true,
 			"dessertPrice": 5,
+			"dessertAmount": 0,
 			"address": "43 Post St, San Jose, CA 95113",
 			"zipcode": 11111,
 			"restaurantImage": "profile-picture.svg",
 			"cuisine": "Mexican",
+			"donateWhere": "Hospital",
 			"restaurantId": 1
 			
 		},
