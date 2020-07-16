@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 // Styling for App
 import '../../App.css';
-import Grid from '@material-ui/core/Grid';
+import {Grid, Paper} from '@material-ui/core/';
 
 const MissionView = () => {
 
@@ -29,22 +29,28 @@ const MissionView = () => {
           <li><Link className="nav-link" style={styles.pageSelected} to="/mission">OUR MISSION</Link></li>
         </ul>
       </div>
-      <br />
-
+      <br/>
+      <br/>
+      <br/>
       <Grid className="content-grid" container spacing={2}>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={6} style={{position:'relative', left:'-30px', top:'20px'}}>
           <svg width="300" height="300" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="100" cy="100" r="100" fill="white" />
             <path d="M53.2573 117.768C49.9293 117.768 46.9639 117.128 44.3613 115.848C41.7586 114.525 39.6893 112.755 38.1533 110.536C36.6173 108.317 35.4439 105.864 34.6333 103.176C33.8653 100.488 33.4813 97.6293 33.4813 94.6C33.4813 91.784 33.8866 89.0533 34.6973 86.408C35.5079 83.72 36.6813 81.2453 38.2173 78.984C39.7959 76.7227 41.8866 74.9093 44.4893 73.544C47.0919 72.136 50.0146 71.432 53.2573 71.432C57.2253 71.432 60.4679 72.3493 62.9853 74.184C65.5453 76.0187 67.8066 78.5147 69.7693 81.672L61.2573 86.472C58.8679 82.6747 56.2013 80.776 53.2573 80.776C50.9533 80.776 49.0333 81.544 47.4973 83.08C45.9613 84.5733 44.9159 86.3013 44.3613 88.264C43.8493 90.2267 43.5933 92.3387 43.5933 94.6C43.5933 98.4827 44.3826 101.768 45.9613 104.456C47.5826 107.101 50.0146 108.424 53.2573 108.424C55.0919 108.424 56.6919 107.827 58.0573 106.632C59.4226 105.437 60.1053 104.051 60.1053 102.472V102.152H52.8093V92.872H70.0893V99.912C70.0893 105.501 68.5106 109.875 65.3533 113.032C62.2386 116.189 58.2066 117.768 53.2573 117.768ZM115.791 114.44C116.047 115.293 116.175 116.211 116.175 117.192C113.615 117.064 111.183 117 108.879 117C106.617 117 104.207 117.064 101.647 117.192C101.647 115.955 101.796 115.037 102.095 114.44C103.289 114.312 104.121 114.12 104.591 113.864C105.103 113.608 105.359 113.181 105.359 112.584C105.359 112.072 105.039 111.027 104.399 109.448L101.583 102.92C94.7988 102.92 89.1668 103.005 84.6868 103.176L82.9588 107.592C82.2761 109.384 81.9348 110.792 81.9348 111.816C81.9348 112.669 82.1908 113.309 82.7028 113.736C83.2574 114.12 84.1108 114.355 85.2628 114.44C85.5614 115.165 85.7108 116.083 85.7108 117.192C84.2601 117.064 82.2334 117 79.6308 117C78.5214 117 76.7508 117.064 74.3188 117.192C74.3188 116.125 74.4681 115.229 74.7668 114.504C75.8761 114.291 76.7508 113.736 77.3908 112.84C78.0308 111.944 78.8628 110.195 79.8868 107.592L93.1348 73.608C93.8601 73.4373 94.6921 73.352 95.6308 73.352L110.863 108.296C111.929 110.685 112.761 112.264 113.359 113.032C113.999 113.8 114.809 114.269 115.791 114.44ZM100.367 100.04L95.5028 88.648C94.2228 85.704 93.2841 83.3787 92.6868 81.672C92.2174 83.1227 91.4068 85.4267 90.2548 88.584L85.8388 100.04H100.367ZM164.949 117H155.221V94.792C155.221 94.3653 155.243 93.896 155.285 93.384C155.072 93.896 154.88 94.3227 154.709 94.664L143.829 117.768L132.821 94.792C132.693 94.4933 132.523 94.024 132.309 93.384V94.792V117H122.581V72.2H132.501L142.933 95.048C143.232 95.7307 143.595 96.6693 144.021 97.864C144.448 96.6693 144.811 95.7307 145.109 95.048L155.861 72.2H164.949V117Z" fill="#1E201F" />
           </svg>
         </Grid>
-        <Grid item xs={12} sm={6}>
-          <p>Our mission is to use technology to support those most adversely affected by the COVID19 pandemic. To that end, we want to use our platform to</p>
-          <p>1. Help restaurants gain business and</p>
-          <p>2. Keep those working hard or in need well fed</p>
-          <p>And keep people going during these hard times.</p>
-          <p>Stay safe!</p>
-          <p>- <b>I</b>ntern <b>B</b>usiness <b>M</b>achine</p>
+
+        <Grid item xs={10} sm={6}>
+          <Paper elevation={5} borderRadius={16} style={{minHeight: 400, minWidth: 400, overflow: 'auto', backgroundColor: 'white', border: '1px solid white', position:'relative', left:'-60px', top:'-10px'}}>
+            <div style={{padding: '40px'}}>
+              <p>Our mission is to use technology to support those most adversely affected by the COVID19 pandemic. To that end, we want to use our platform to</p>
+              <p>1. Help restaurants gain business and</p>
+              <p>2. Keep those working hard or in need well fed</p>
+              <p>And keep people going during these hard times.</p>
+              <p>Stay safe!</p>
+              <p>- <b>I</b>ntern <b>B</b>usiness <b>M</b>achine</p>
+            </div>
+          </Paper>
         </Grid>
       </Grid>
 
