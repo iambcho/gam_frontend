@@ -109,9 +109,9 @@ const AllRestaurantsView= (props) => {
 											id="demo-simple-select"
 										>
 											<MenuItem value={0}>0</MenuItem>
-											<MenuItem value={1}>1</MenuItem>
-											<MenuItem value={5}>5</MenuItem>
-											<MenuItem value={10}>10</MenuItem>
+											<MenuItem value={1}>5</MenuItem>
+											<MenuItem value={5}>10</MenuItem>
+											<MenuItem value={10}>20</MenuItem>
 											<MenuItem value={100}>100</MenuItem>
 										</Select>
 										</FormControl>
@@ -128,9 +128,9 @@ const AllRestaurantsView= (props) => {
 											id="demo-simple-select"
 										>
 											<MenuItem value={0}>0</MenuItem>
-											<MenuItem value={1}>1</MenuItem>
-											<MenuItem value={5}>5</MenuItem>
-											<MenuItem value={10}>10</MenuItem>
+											<MenuItem value={1}>5</MenuItem>
+											<MenuItem value={5}>10</MenuItem>
+											<MenuItem value={10}>20</MenuItem>
 											<MenuItem value={100}>100</MenuItem>
 										</Select>
 										</FormControl>
@@ -146,15 +146,15 @@ const AllRestaurantsView= (props) => {
 											id="demo-simple-select"
 										>
 											<MenuItem value={0}>0</MenuItem>
-											<MenuItem value={1}>1</MenuItem>
-											<MenuItem value={5}>5</MenuItem>
-											<MenuItem value={10}>10</MenuItem>
+											<MenuItem value={1}>5</MenuItem>
+											<MenuItem value={5}>10</MenuItem>
+											<MenuItem value={10}>20</MenuItem>
 											<MenuItem value={100}>100</MenuItem>
 										</Select>
 										</FormControl>
 									</Grid>:""}
 							</Grid>
-							{/* <Grid item style={{paddingLeft:"20px"}}>
+							<Grid item style={{paddingLeft:"20px"}}>
 							<h4 style={{textAlign:"left", marginBottom:"0px"}}>Donate Where?</h4>
 							</Grid>
 							<br/>
@@ -169,10 +169,10 @@ const AllRestaurantsView= (props) => {
 								<Grid item xs={2}>
 									<ColorButton>Shelter</ColorButton>	
 								</Grid>
-							</Grid> */}
+							</Grid>
 							<br/>
 							<Grid item>
-								<Link to={`/checkout`}>
+								<Link to={`/checkout/${restaurant.restaurantId}`}>
 								<ColorButton>Checkout</ColorButton>
 								</Link>
 							</Grid>
