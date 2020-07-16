@@ -219,6 +219,14 @@ p {
   font-size: 18px;
 }
 
+.home-font {
+  text-align: left;
+  font-family: 'IBM Plex Serif';
+  font-weight: 'Medium';
+  font-size: 30px;
+  line-height: 47px;
+}
+
 .address {
   text-align: left;
   font-family: 'IBM Plex Serif';
