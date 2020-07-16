@@ -14,6 +14,9 @@ import HomePageView from "./../view/HomePageView";
 // enabling us to use the state and the functionality provided by the
 // students.js file located in our store
 import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
+import { currentZipcodeThunk } from '../../store/actions/actionCreatorsThunks';
+
 
 // These imports are needed to allow us to modify the 
 // page based on teh action we want to preform
@@ -34,9 +37,6 @@ updated and this displays all the students. If you wish to double check please d
 at each component/function and you will see the order of things being called.
 */
 class HomePage extends Component {
-    // componentDidMount() {
-    //     this.props.fetchAllStudents();
-    // }
 
     render() {
         return (
@@ -48,24 +48,22 @@ class HomePage extends Component {
 // Declaration for mapStateToProps;
 // The keys in this returned object will be on your component's `props` object;
 // The values of these keys reflect the value of the piece of state in your Redux store;
-// const mapState = (state) => {
-//     return {
-//       students: state.students,
-//     }
-//   }
-  
-  // Declaration for mapDispatchToProps;
-  // The keys in this returned object will be on your component's `props` object as well;
-  // The values of these keys are anonymous functions that will dispatch imported action creators 
-  // or thunks so that a component can communicate with the appropriate reducer function(s);
-  // const mapDispatch = (dispatch) => {
-  //   return {
-  //     fetchAllStudents: () => dispatch(fetchStudentsThunk()),
-  //     getCurrentStudent: (student) => dispatch(currStudentThunk(student)),
-  //     removeStudent: (id) => dispatch(removeStudentThunk(id))
-  //   }
-  // }
-  
-  //allows us to connect to the store and get the needed objects/state
-	// export default connect(mapState, mapDispatch)(AllStudents);
-	export default HomePage;
+const mapState = (state) => {
+	return ({
+		zipcode: state.currentZipcode
+	})
+}
+
+// Declaration for mapDispatchToProps;
+// The keys in this returned object will be on your component's `props` object as well;
+// The values of these keys are anonymous functions that will dispatch imported action creators 
+// or thunks so that a component can communicate with the appropriate reducer function(s);
+const mapDispatch = (dispatch) => {
+	return {
+		currentZipcodeThunk: (zipcode) => dispatch(currentZipcodeThunk(zipcode))
+	}
+}
+
+//allows us to connect to the store and get the needed objects/state
+export default withRouter(connect(mapState, mapDispatch)(HomePage));
+

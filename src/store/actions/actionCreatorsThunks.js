@@ -57,7 +57,7 @@ let arrayOfRestaurantsFromAPI = [
 			"zipcode": "95113",
 			"restaurantImage": "profile-picture3.svg",
 			"cuisine": "Caribbean",
-			"donateTo": "Hospital",
+			"donateTo": "Shelter",
 			"restaurantId": 3
 			
 		},
@@ -96,6 +96,13 @@ const currentRestaurant = (restaurant) => {
 		}
 }
 
+const currentZipcode = (zipcode) => {
+		return {
+				type: types.CURRENT_ZIPCODE,
+				payload: zipcode
+		}
+}
+
 
 
 //-----------------------------------------------------------------------------
@@ -123,6 +130,12 @@ export const currentRestaurantThunk = (restaurant) => (dispatch) => {
 	console.log(restaurant)	
 	dispatch(currentRestaurant(restaurant));
 }
+
+export const currentZipcodeThunk = (zipcode) => (dispatch) => {
+	console.log(zipcode)	
+	dispatch(currentZipcode(zipcode));
+}
+
 
 
 
