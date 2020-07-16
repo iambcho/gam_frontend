@@ -21,9 +21,6 @@ const HomePageView = () => {
       fontFamily: 'Overpass',
       fontWeight: '600'
     },
-    homeSubtitles: {
-      textAlign: 'center',
-    },
     gridItem: {
       textAlign: 'center',
       align: 'center',
