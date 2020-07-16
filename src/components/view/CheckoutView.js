@@ -2,9 +2,11 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import '../../App.css';
-import {Button, TextField, List, ListItem, Grid, Paper, Card, CardActions, CardContent} from '@material-ui/core';
+import {Button, TextField, List, ListItem, Grid, Paper, Card, CardActions, CardContent, Divider} from '@material-ui/core';
 
 const CheckoutView= (props) => {
+		//destructuring from props 
+		const { restaurants, restaurant, currentRestaurantThunk } = props;
     
     const pageSelected = {
         color: '#1E201F'
@@ -36,7 +38,34 @@ const CheckoutView= (props) => {
                 <Grid container direction="column" justify="center" alignItems="center">
                     <Grid item><h1>Checkout</h1></Grid>
                     <Grid item><h2>Receipt</h2></Grid>
-                    <Grid item><p>Items...</p></Grid>
+										<Grid item><p>{`Thank you for supporting ${restaurant.name}!`}</p></Grid>
+                    <Grid 
+											container 
+											style={{paddingLeft:"70px"}} 
+											direction="column"
+											spacing={2}
+											>
+											{restaurant.foodAmount > 0 
+											? <Grid 
+													container 
+													direction="row"
+													spacing={2}>
+													<Grid item xs={6}>
+													<p>{`${restaurant.foodAmount} meals`}</p>
+													</Grid>
+													<Grid item xs={6}>
+													<p>{`$${restaurant.foodPrice * restaurant.foodAmount}`}</p>
+													</Grid>
+												</Grid>:""}
+											{restaurant.coffeeAmount > 0  
+											? <Grid item xs={4}>
+											<p>{`${restaurant.coffeeAmount} coffees`}</p>
+											</Grid>:""}
+											{restaurant.dessertAmount > 0  
+											? <Grid item xs={4}>
+											<p>{`${restaurant.dessertAmount} desserts`}</p>
+											</Grid>:""}
+										</Grid>
                     <Grid item><img src='line1.svg'></img></Grid>
                     <Grid item><p>Total</p></Grid>
                     <Grid item ><Link to="/confirmation"><Button variant="contained" color="secondary" style={{position:'relative', top:'180px', width:'200px', height: '70px'}}>Pay with PayPal</Button></Link></Grid>

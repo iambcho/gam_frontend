@@ -8,7 +8,7 @@ let arrayOfRestaurantsFromAPI = [
 			"name": "Don Pedro's",
 			"hasFood": true,
 			"foodPrice": 10,
-			"foodAmount": 0,
+			"foodAmount": 100,
 			"hasCoffee": true,
 			"coffeePrice": 3,
 			"coffeeAmount": 100,

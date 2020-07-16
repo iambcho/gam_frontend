@@ -14,9 +14,9 @@ import { fetchRestaurantsThunk, currentRestaurantThunk } from '../../store/actio
 
 
 class SingleRestaurant extends Component {
-	componentDidMount() {
-		this.props.fetchRestaurantsThunk();
-	}
+	// componentDidMount() {
+	// 	this.props.fetchRestaurantsThunk();
+	// }
 
 	render() {
 		return (
