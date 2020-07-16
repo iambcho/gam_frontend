@@ -10,7 +10,8 @@ import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material
 import { Button, Input, TextField, List, ListItem, Grid, Paper, Card, CardActions, CardContent } from '@material-ui/core';
 import { purple } from '@material-ui/core/colors';
 
-const HomePageView = () => {
+const HomePageView = (props) => {
+	const { currentZipcodeThunk } = props;
   const styles = {
     pageSelected: {
       color: '#1E201F'
@@ -73,7 +74,7 @@ const HomePageView = () => {
       <Grid container className='content-grid' spacing={2}>
         <Grid item xs={12}>
           <form onSubmit='' className="zip-input">
-            <Input id="input-zip" placeholder="Enter zip code"/>
+            <Input id="input-zip" placeholder="Enter zip code" onChange={''}/>
 						<Link to={`/restaurants`}>
             <button type="submit" variant="contained" className='the-button' onClick=''>Search</button><br />
 						</Link>

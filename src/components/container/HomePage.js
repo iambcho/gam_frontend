@@ -40,7 +40,10 @@ class HomePage extends Component {
 
     render() {
         return (
-            <HomePageView/>
+            <HomePageView
+						currentZipcode={this.props.currentZipcode}
+						currentZipcodeThunk={this.props.currentZipcodeThunk}
+						/>
         )
     }
 }
@@ -50,7 +53,7 @@ class HomePage extends Component {
 // The values of these keys reflect the value of the piece of state in your Redux store;
 const mapState = (state) => {
 	return ({
-		zipcode: state.currentZipcode
+		currentZipcode: state.currentZipcode
 	})
 }
 
