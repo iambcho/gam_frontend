@@ -43,10 +43,10 @@ const MissionView = () => {
         <Grid item xs={10} sm={6}>
           <Paper elevation={5} borderRadius={16} style={{minHeight: 400, minWidth: 400, overflow: 'auto', backgroundColor: 'white', border: '1px solid white', position:'relative', left:'-60px', top:'-10px'}}>
             <div style={{padding: '40px'}}>
-              <p>Our mission is to use technology to support those most adversely affected by the COVID19 pandemic. To that end, we want to use our platform to</p>
-              <p>1. Help restaurants gain business and</p>
-              <p>2. Keep those working hard or in need well fed</p>
-              <p>And keep people going during these hard times.</p>
+              <p>Our mission is to use technology to support those most adversely affected by the COVID-19 pandemic. To that end, we want to use our platform to:</p>
+              <p>1. Help restaurants gain business</p>
+              <p>2. Deliver meals and nutrition to those working hard</p>
+              <p>3. Provide support during these difficult times</p>
               <p>Stay safe!</p>
               <p>- <b>I</b>ntern <b>B</b>usiness <b>M</b>achine</p>
             </div>
